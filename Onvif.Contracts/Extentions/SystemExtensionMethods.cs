@@ -1,0 +1,25 @@
+﻿using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+
+namespace Onvif.Contracts.Extentions
+{
+    public static class SystemExtensionMethods
+    {
+        // Deep clone
+        public static T DeepClone<T>(this T a)
+        {
+            using (var stream = new MemoryStream())
+            {
+                var formatter = new BinaryFormatter();
+                formatter.Serialize(stream, a);
+                stream.Position = 0;
+                return (T)formatter.Deserialize(stream);
+            }
+        }
+        public static bool In<T>(this T obj, params T[] vals)
+        {
+            return vals.Contains(obj);
+        }
+    }
+}

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06E998E6-6AA5-49B1-B87C-8BB7CF2CD9C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Onvif.Proxy</RootNamespace>
+    <AssemblyName>Onvif.Proxy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\eFactorLabsAPI.SNK</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Google.ProtocolBuffers, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers.Serialization, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OnvifProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Onvif.Contracts\Onvif.Contracts.csproj">
+      <Project>{20a11b23-d00b-4a82-8156-e6e4f71bd156}</Project>
+      <Name>Onvif.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onvif.Proxy.Contracts\Onvif.Proxy.Contracts.csproj">
+      <Project>{9a28cf5d-a5ee-49bb-afe8-e2c020ac32e2}</Project>
+      <Name>Onvif.Proxy.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\onvif\onvif.services\onvif.services.csproj">
+      <Project>{3cb4f764-648f-4aa3-9e85-91992337d3ea}</Project>
+      <Name>onvif.services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\onvif\onvif.session\onvif.session.fsproj">
+      <Project>{902a3ff3-e9bd-443d-8fc1-69aa42b5f76b}</Project>
+      <Name>onvif.session</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\onvif\onvif.utils\onvif.utils.fsproj">
+      <Project>{55ded141-56c3-4da9-be07-03708d7a2275}</Project>
+      <Name>onvif.utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.async\utils.async.csproj">
+      <Project>{ca45551a-6a4e-4e3d-af2e-e081f209bb14}</Project>
+      <Name>utils.async</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.common\utils.common.csproj">
+      <Project>{2faa440a-87d3-41ab-9931-25ac306a25ba}</Project>
+      <Name>utils.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.diagnostics\utils.diagnostics.csproj">
+      <Project>{c89d83ca-c0fa-4573-a63e-f716dd628696}</Project>
+      <Name>utils.diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.fsharp\utils.fsharp.fsproj">
+      <Project>{04196c86-66f6-4a9c-be0b-90aa5353b1c6}</Project>
+      <Name>utils.fsharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.linq\utils.linq.csproj">
+      <Project>{65fb2c9f-3a0f-4e3f-adbd-912bc6f08508}</Project>
+      <Name>utils.linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.xml\utils.xml.csproj">
+      <Project>{c00b45e2-5aba-4f7a-bd85-505594794aae}</Project>
+      <Name>utils.xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\eFactorLabsAPI.SNK">
+      <Link>eFactorLabsAPI.SNK</Link>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <!--MergeAssemblies Include="$(OutputPath)\AutoMapper.dll" />
+      <MergeAssemblies Include="$(OutputPath)\AutoMapper.Net4.dll" />
+      <MergeAssemblies Include="$(OutputPath)\FSharp.Core.dll" />
+      <MergeAssemblies Include="$(OutputPath)\System.Reactive.Core.dll" />
+      <MergeAssemblies Include="$(OutputPath)\System.Reactive.Interfaces.dll" />
+      <MergeAssemblies Include="$(OutputPath)\System.Reactive.Linq.dll" />
+      <MergeAssemblies Include="$(OutputPath)\Onvif.Proxy.dll" />
+      <MergeAssemblies Include="$(OutputPath)\Onvif.Contract.dll" />
+      <MergeAssemblies Include="$(OutputPath)\onvif.services.dll" />
+      <MergeAssemblies Include="$(OutputPath)\onvif.session.dll" />
+      <MergeAssemblies Include="$(OutputPath)\onvif.utils.dll" />
+      <MergeAssemblies Include="$(OutputPath)\utils.async.dll" />
+      <MergeAssemblies Include="$(OutputPath)\utils.common.dll" />
+      <MergeAssemblies Include="$(OutputPath)\utils.diagnostics.dll" />
+      <MergeAssemblies Include="$(OutputPath)\utils.fsharp.dll" />
+      <MergeAssemblies Include="$(OutputPath)\utils.linq.dll" />
+      <MergeAssemblies Include="$(OutputPath)\utils.xml.dll" /-->
+    </ItemGroup>
+    <PropertyGroup>
+      <OutputAssembly>$(OutputPath)\Onvif.dll</OutputAssembly>
+      <Merger Condition="('$(OS)' == 'Windows_NT')">"$(SolutionDir)\packages\ilmerge.2.14.1208\tools\ILMerge.exe"</Merger>
+      <Merger Condition="('$(OS)' != 'Windows_NT')">mono --runtime=v4.0.30319 "$(SolutionDir)\packages\ILRepack.2.0.2\tools\ILRepack.exe"</Merger>
+    </PropertyGroup>
+    <Message Text="MERGING: @(MergeAssemblies->'%(Filename)') into $(OutputAssembly)" Importance="High" />
+    <!--Exec Command="$(Merger) /out:&quot;$(OutputAssembly)&quot; @(MergeAssemblies->'&quot;%(FullPath)&quot;', ' ')" /-->
+  </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20A11B23-D00B-4A82-8156-E6E4F71BD156}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Onvif.Contracts</RootNamespace>
+    <AssemblyName>Onvif.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\eFactorLabsAPI.SNK</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\Constant.cs" />
+    <Compile Include="Constants\GlobalProcessSettings.cs" />
+    <Compile Include="Enums\ActorCommands.cs" />
+    <Compile Include="Enums\AlarmSourceType.cs" />
+    <Compile Include="Enums\AlarmType.cs" />
+    <Compile Include="Enums\EmailTarget.cs" />
+    <Compile Include="Enums\EventTopic.cs" />
+    <Compile Include="Enums\MetricNames.cs" />
+    <Compile Include="Enums\Result.cs" />
+    <Compile Include="Enums\ServiceType.cs" />
+    <Compile Include="Enums\SourcePoint.cs" />
+    <Compile Include="Enums\State.cs" />
+    <Compile Include="Enums\SystemAlerts.cs" />
+    <Compile Include="Extentions\ClassNameExtensions.cs" />
+    <Compile Include="Extentions\DateTimeExtensions.cs" />
+    <Compile Include="Extentions\SystemExtensionMethods.cs" />
+    <Compile Include="Helper\ComputerHelper.cs" />
+    <Compile Include="Helper\ConvertorHelper.cs" />
+    <Compile Include="Helper\CryptoRandom.cs" />
+    <Compile Include="Helper\IpAddressHelper.cs" />
+    <Compile Include="Helper\RandomHelper.cs" />
+    <Compile Include="Helper\SerializerHelper.cs" />
+    <Compile Include="Messages\ActorGeneralCommand.cs" />
+    <Compile Include="Messages\AlertMessage.cs" />
+    <Compile Include="Messages\Error.cs" />
+    <Compile Include="Messages\GeneralNotificationEmail.cs" />
+    <Compile Include="Messages\IHashKey.cs" />
+    <Compile Include="Messages\Monitoring\OnvifCameraBase.cs" />
+    <Compile Include="Messages\Monitoring\OnvifCameraCriticalError.cs" />
+    <Compile Include="Messages\Monitoring\OnvifCameraErrorEvent.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailBase.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailMemoryLeaks.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailMessage.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailNetworkError.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailNoData.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailNoEvent.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailRestartService.cs" />
+    <Compile Include="Messages\OnvifNotificationEmailReportEventCountStatistics.cs" />
+    <Compile Include="Messages\OnvifRebootCommand.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifCreateActions.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifCreateActionTriggers.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifDeleteActions.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifDeleteActionTriggers.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifGetActions.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifGetActionTriggers.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifGetSupportedActions.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifModifyActions.cs" />
+    <Compile Include="Messages\Onvif\Actions\OnvifModifyActionTriggers.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifCreateAnalyticsEngineControl.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifCreateAnalyticsEngineInputs.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifCreateAnalyticsModules.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifDeleteAnalyticsEngineControl.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifDeleteAnalyticsEngineInputs.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifDeleteAnalyticsModules.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsDeviceStreamUri.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsEngine.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsEngineControl.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsEngineControls.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsEngineInputs.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsEngines.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsModules.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetAnalyticsState.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifGetVideoAnalyticsConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifModifyAnalyticsModules.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifSetAnalyticsEngineControl.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifSetAnalyticsEngineInput.cs" />
+    <Compile Include="Messages\Onvif\Analytics\OnvifSetVideoAnalyticsConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Audio\OnvifAddAudioEncoderConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Audio\OnvifAddAudioSourceConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Audio\OnvifRemoveAudioEncoderConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Audio\OnvifRemoveAudioSourceConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Certificates\OnvifGetCertificates.cs" />
+    <Compile Include="Messages\Onvif\Certificates\OnvifGetCertificatesStatus.cs" />
+    <Compile Include="Messages\Onvif\Certificates\OnvifLoadCertificates.cs" />
+    <Compile Include="Messages\Onvif\CloudWatch\ICloudWatchLogMessage.cs" />
+    <Compile Include="Messages\Onvif\Device\OnvifSetDeviceIdentification.cs" />
+    <Compile Include="Messages\Onvif\Device\OnvifSetDeviceLocation.cs" />
+    <Compile Include="Messages\Onvif\Device\OnvifSetDeviceName.cs" />
+    <Compile Include="Messages\Onvif\Events\EnableMotionEvents.cs" />
+    <Compile Include="Messages\Onvif\Imaging\OnvifGetImagingMoveOptions.cs" />
+    <Compile Include="Messages\Onvif\Imaging\OnvifGetImagingOptions.cs" />
+    <Compile Include="Messages\Onvif\Imaging\OnvifGetImagingSettings.cs" />
+    <Compile Include="Messages\Onvif\Imaging\OnvifGetImagingStatus.cs" />
+    <Compile Include="Messages\Onvif\Imaging\OnvifImagingMove.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetDiscoveryMode.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetDns.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetHostName.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetNetworkDefaultGateway.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetNetworkInterfaces.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetNetworkProtocols.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetNtp.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetDiscoveryMode.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetDns.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetHostName.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetNetworkDefaultGateway.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetNetworkInterfaces.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetNetworkProtocols.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetNetworkSettings.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetNtp.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifSetZeroConfiguration.cs" />
+    <Compile Include="Messages\Onvif\OnvifBase.cs" />
+    <Compile Include="Messages\Onvif\Control\OnvifCameraReboot.cs" />
+    <Compile Include="Messages\Onvif\Control\OnvifCameraReset.cs" />
+    <Compile Include="Messages\Onvif\OnvifGetIsAnalyticsSupported.cs" />
+    <Compile Include="Messages\Onvif\OnvifGetIsEventsSupported.cs" />
+    <Compile Include="Messages\Onvif\OnvifGetIsFirmwareUpgradeSupported.cs" />
+    <Compile Include="Messages\Onvif\OnvifGetIsPtzSupported.cs" />
+    <Compile Include="Messages\Onvif\OnvifGetIsZeroConfigurationSupported.cs" />
+    <Compile Include="Messages\Onvif\Profiles\OnvifCreateProfile.cs" />
+    <Compile Include="Messages\Onvif\Profiles\OnvifDeleteProfile.cs" />
+    <Compile Include="Messages\Onvif\Profiles\OnvifGetProfile.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifAddPtzConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifCreateStandartPtzNode.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifGetPtzData.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzIsAbsoluteMoveSupported.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzIsContinuousMoveSupported.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzIsFixedHomePositionSpecified.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzIsHomeSupported.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzIsRelativeMoveSupported.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifLoadPtzNode.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifLoadPtzStatus.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzAbsoluteMove.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzContinuousMove.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzIsFixedHomePosition.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzRelativeMove.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetConfigurations.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzSendAuxiliaryCommand.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetConfigurationsOptions.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetNode.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetNodes.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetPresets.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGetStatus.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGotoHomePosition.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzGotoPreset.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzRemovePreset.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzSetConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzSetHomePosition.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzSetPreset.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifPtzStop.cs" />
+    <Compile Include="Messages\Onvif\Ptz\OnvifRemovePtzConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Receiver\OnvifCreateReceiver.cs" />
+    <Compile Include="Messages\Onvif\Receiver\OnvifDeleteReceiver.cs" />
+    <Compile Include="Messages\Onvif\Receiver\OnvifGetReceiver.cs" />
+    <Compile Include="Messages\Onvif\Receiver\OnvifGetReceivers.cs" />
+    <Compile Include="Messages\Onvif\Receiver\OnvifGetReceiverState.cs" />
+    <Compile Include="Messages\Onvif\Receiver\OnvifSetReceiverMode.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifCreateRecording.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifCreateRecordingJob.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifDeleteRecording.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifDeleteRecordingJob.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifDeleteTrack.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifGetRecordingConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifGetRecordingJobConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifGetRecordingJobs.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifGetRecordingJobState.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifGetRecordings.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifGetTrackConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifSetRecordingConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifSetRecordingJobConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifSetRecordingJobMode.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifSetTrackConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Recording\OnvifSetTrackRecordingConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Replay\OnvifGetReplayUri.cs" />
+    <Compile Include="Messages\Onvif\Rules\OnvifCreateRules.cs" />
+    <Compile Include="Messages\Onvif\Rules\OnvifDeleteRules.cs" />
+    <Compile Include="Messages\Onvif\Rules\OnvifGetRules.cs" />
+    <Compile Include="Messages\Onvif\Rules\OnvifModifyRules.cs" />
+    <Compile Include="Messages\Onvif\SystemLog\OnvifGetSystemLog.cs" />
+    <Compile Include="Messages\Onvif\SystemLog\OnvifGetSystemLogTypes.cs" />
+    <Compile Include="Messages\Onvif\Users\OnvifCreateUser.cs" />
+    <Compile Include="Messages\Onvif\Users\OnvifCreateUsers.cs" />
+    <Compile Include="Messages\Onvif\Certificates\OnvifDeleteCertificates.cs" />
+    <Compile Include="Messages\Onvif\Users\OnvifDeleteUser.cs" />
+    <Compile Include="Messages\Onvif\Users\OnvifDeleteUsers.cs" />
+    <Compile Include="Messages\OnvifEventTopicFilter.cs" />
+    <Compile Include="Messages\OnvifGetDeviceInfo.cs" />
+    <Compile Include="Messages\Onvif\Network\OnvifGetNetworkSettings.cs" />
+    <Compile Include="Messages\OnvifGetProfileManagement.cs" />
+    <Compile Include="Messages\Onvif\Profiles\OnvifGetProfiles.cs" />
+    <Compile Include="Messages\Onvif\SystemDate\OnvifGetSystemDateTime.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifGetVideoSettings.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifGetVideoSupportedResolutions.cs" />
+    <Compile Include="Messages\Onvif\OnvifGetWebPageUri.cs" />
+    <Compile Include="Messages\Onvif\Users\OnvifModifyUser.cs" />
+    <Compile Include="Messages\Onvif\OnvifProcessingEvent.cs" />
+    <Compile Include="Messages\Onvif\Relay\OnvifSetRelayOutputSettings.cs" />
+    <Compile Include="Messages\Onvif\OnvifResult.cs" />
+    <Compile Include="Messages\Onvif\Certificates\OnvifSetCertificatesStatus.cs" />
+    <Compile Include="Messages\Onvif\Imaging\OnvifSetImagingSettings.cs" />
+    <Compile Include="Messages\Onvif\Metadata\OnvifSetMetadataConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Relay\OnvifSetRelayOutputState.cs" />
+    <Compile Include="Messages\Onvif\SystemDate\OnvifSetSystemDateAndTime.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoBitRate.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoEncoderConfiguration.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoEncodingInterval.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoFrameRate.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoGovLength.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoQuality.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoResolution.cs" />
+    <Compile Include="Messages\Onvif\Video\OnvifSetVideoSettings.cs" />
+    <Compile Include="Messages\Onvif\SystemDate\OnvifSyncSystemDateTimeWithNtp.cs" />
+    <Compile Include="Messages\Onvif\SystemDate\OnvifSyncWithSystem.cs" />
+    <Compile Include="Messages\Onvif\Users\OnvifGetUsers.cs" />
+    <Compile Include="Messages\RescanEnentsForProcessing.cs" />
+    <Compile Include="Messages\ResourceMonitoring.cs" />
+    <Compile Include="Messages\ScanCounters.cs" />
+    <Compile Include="Messages\ScanForCameraMonitoring.cs" />
+    <Compile Include="Messages\StateActor.cs" />
+    <Compile Include="Messages\StopChildActors.cs" />
+    <Compile Include="Messages\StopEventsSubscriptions.cs" />
+    <Compile Include="Messages\SubscribeEventsForProcessing.cs" />
+    <Compile Include="Messages\UnSubscribeEventsForProcessing.cs" />
+    <Compile Include="Messages\Onvif\CloudWatch\CloudWatchLogMessage.cs" />
+    <Compile Include="Model\AlertProfile.cs" />
+    <Compile Include="Model\CameraInfo.cs" />
+    <Compile Include="Model\CameraProductInfo.cs" />
+    <Compile Include="Model\Container.cs" />
+    <Compile Include="Messages\Onvif\CloudWatch\DeleteCloudWatchLogStream.cs" />
+    <Compile Include="Model\DeviceInfo.cs" />
+    <Compile Include="Model\EventDescriptor.cs" />
+    <Compile Include="Model\EventsStorage.cs" />
+    <Compile Include="Model\MetadataSettings.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\NetworkSettings.cs" />
+    <Compile Include="Model\ProfileManagement.cs" />
+    <Compile Include="Model\PtzData.cs" />
+    <Compile Include="Model\SchedulerItem.cs" />
+    <Compile Include="Model\CameraProfile.cs" />
+    <Compile Include="Model\CustomerProfileItem.cs" />
+    <Compile Include="Model\VideoSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\onvif\onvif.services\onvif.services.csproj">
+      <Project>{3cb4f764-648f-4aa3-9e85-91992337d3ea}</Project>
+      <Name>onvif.services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\onvif\onvif.utils\onvif.utils.fsproj">
+      <Project>{55ded141-56c3-4da9-be07-03708d7a2275}</Project>
+      <Name>onvif.utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\eFactorLabsAPI.SNK">
+      <Link>eFactorLabsAPI.SNK</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
