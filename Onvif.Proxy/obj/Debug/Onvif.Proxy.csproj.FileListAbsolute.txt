@@ -1,2 +1,0 @@
-C:\PROJECTS\Onvif\Onvif.Proxy\obj\Debug\Onvif.Proxy.csprojResolveAssemblyReference.cache
-C:\PROJECTS\Onvif\Onvif.Proxy\obj\Debug\Onvif.Proxy.csproj.CoreCompileInputs.cache
