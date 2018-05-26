@@ -1,20 +1,20 @@
 ﻿using System;
-using Onvif.Camera.Client.Contracts;
+using Onvif.Client.Contracts;
 
-namespace Onvif.Camera.Client
+namespace Onvif.Client
 {
     public interface IOnvifClientSync :
-        IOnvifClientNetworkSync,
-        IOnvifClientVideoSync,
-        IOnvifClientUsersSync,
-        IOnvifClientDeviceSync,
-        IOnvifClientSystemDateTimeSync,
-        IOnvifClientCertificatesSync,
-        IOnvifClientProfilesSync,
-        IOnvifClientEvent,
-        IOnvifClientSystemLogSync,
-        IOnvifClientActionsSync,
-        IOnvifClientPtzSync,
+        /*IOnvifClientNetworkSync,
+         IOnvifClientVideoSync,
+         IOnvifClientUsersSync,
+         IOnvifClientDeviceSync,
+         IOnvifClientSystemDateTimeSync,
+         IOnvifClientCertificatesSync,
+         IOnvifClientProfilesSync,
+         IOnvifClientEvent,
+         IOnvifClientSystemLogSync,*/
+         IOnvifClientActionsSync
+        /*IOnvifClientPtzSync,
         IOnvifClientAnalyticsSync,
         IOnvifClientPropertySync,
         IOnvifClientReceiverSync,
@@ -22,7 +22,7 @@ namespace Onvif.Camera.Client
         IOnvifClientRecordingSync,
         IOnvifClientRelaySync,
         IOnvifClientAudioSync,
-        IDisposable
+        IDisposable*/
     {
     }
 }

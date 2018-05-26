@@ -1,10 +1,9 @@
-﻿using System;
-using Onvif.Camera.Client.Contracts;
+﻿using Onvif.Client.Contracts;
 
-namespace Onvif.Camera.Client
+namespace Onvif.Client
 {
     public interface IOnvifClientAsync :
-        IOnvifClientNetworkAsync, 
+       /* IOnvifClientNetworkAsync, 
         IOnvifClientVideoAsync, 
         IOnvifClientUsersAsync, 
         IOnvifClientDeviceAsync, 
@@ -12,9 +11,9 @@ namespace Onvif.Camera.Client
         IOnvifClientCertificatesAsync,
         IOnvifClientProfilesAsync,
         IOnvifClientEvent,
-        IOnvifClientSystemLogAsync,
-        IOnvifClientActionsAsync,
-        IOnvifClientPtzAsync,
+        IOnvifClientSystemLogAsync,*/
+        IOnvifClientActionsAsync
+        /*IOnvifClientPtzAsync,
         IOnvifClientAnalyticsAsync,
         IOnvifClientPropertyAsync,
         IOnvifClientReceiverAsync,
@@ -22,7 +21,7 @@ namespace Onvif.Camera.Client
         IOnvifClientRecordingAsync,
         IOnvifClientRelayAsync,
         IOnvifClientAudioAsync,
-        IDisposable
+        IDisposable*/
     {
     }
 }

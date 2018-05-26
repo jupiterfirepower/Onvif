@@ -1,0 +1,17 @@
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\utils.diagnostics.dll.config
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\utils.diagnostics.dll
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\utils.diagnostics.pdb
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\System.Reactive.Core.dll
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\System.Reactive.Interfaces.dll
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\System.Reactive.Linq.dll
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\utils.linq.dll
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\utils.linq.pdb
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\utils.linq.dll.config
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\System.Reactive.Core.xml
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\System.Reactive.Interfaces.xml
+C:\PROJECTS\Onvif\utils\utils.diagnostics\bin\Debug\AnyCPU\System.Reactive.Linq.xml
+C:\PROJECTS\Onvif\utils\utils.diagnostics\obj\Debug\utils.diagnostics.csprojAssemblyReference.cache
+C:\PROJECTS\Onvif\utils\utils.diagnostics\obj\Debug\utils.diagnostics.csproj.CoreCompileInputs.cache
+C:\PROJECTS\Onvif\utils\utils.diagnostics\obj\Debug\utils.diagnostics.csproj.CopyComplete
+C:\PROJECTS\Onvif\utils\utils.diagnostics\obj\Debug\utils.diagnostics.dll
+C:\PROJECTS\Onvif\utils\utils.diagnostics\obj\Debug\utils.diagnostics.pdb

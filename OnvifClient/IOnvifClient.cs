@@ -1,14 +1,16 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using onvif.services;
 using Onvif.Contracts.Messages.Onvif;
 
-namespace Onvif.Camera.Client
+namespace Onvif.Client
 {
     public interface IOnvifClient :
         IOnvifClientAsync,
-        IOnvifClientSync
+        IOnvifClientSync,
+        IDisposable
     {
-        Task<OnvifResult> SetMetadataConfigurationAsync(MetadataConfiguration metaCfg);
-        OnvifResult SetMetadataConfiguration(MetadataConfiguration metaCfg);
+       // Task<OnvifResult> SetMetadataConfigurationAsync(MetadataConfiguration metaCfg);
+       // OnvifResult SetMetadataConfiguration(MetadataConfiguration metaCfg);
     }
 }

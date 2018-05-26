@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>onvif.utils</name></assembly>
+<members>
+<member name="M:onvif.utils.OdmSession.GetPullPointEvents(onvif.services.FilterType)">
+ <summary>Returns observable which can be used to retrieve events via PullPoint mechanism.</summary>
+ <param name="filter">
+ Describe set of filters, which notification producer should use to filter events. 
+ If null the pullpoint should notify all occurring events to the client.
+ </param>
+</member>
+<member name="M:onvif.utils.OdmSession.GetPullPointEvents(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement})">
+ <summary>Returns observable which can be used to retrieve events via PullPoint mechanism.</summary>
+ <param name="filters">Describe set of filters, which notification producer should use to filter events.</param>
+</member>
+<member name="M:onvif.utils.OdmSession.GetPullPointEvents(System.Collections.Generic.IEnumerable{onvif.services.TopicExpressionFilter},System.Collections.Generic.IEnumerable{onvif.services.MessageContentFilter})">
+ <summary>Returns observable which can be used to retrieve events via PullPoint mechanism.</summary>
+ <param name="topicExpressionFilters">Describe subset of filters, which notification producer should use to filter events.</param>
+ <param name="messageContentFilters">Describe subset of filters, which notification producer should use to filter events.</param>
+</member>
+<member name="M:onvif.utils.OdmSession.GetPullPointEvents">
+ <summary>Returns observable which can be used to retrieve events via PullPoint mechanism.</summary>
+</member>
+<member name="M:onvif.utils.OdmSession.GetBaseEvents(System.Int32,onvif.services.FilterType)">
+ <summary>Returns observable which can be used to retrieve events via BaseNotification mechanism.</summary>
+ <param name="port">Number of tcp port, that will be used to listen for events from subscribtion manager</param>
+ <param name="filter">
+ Describe set of filters, which notification producer should use to filter events. 
+ If null the notification producer should notify all occurring events to the client.
+ </param>
+</member>
+<member name="M:onvif.utils.OdmSession.GetBaseEvents(System.Int32,System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement})">
+ <summary>Returns observable which can be used to retrieve events via BaseNotification mechanism.</summary>
+ <param name="port">Number of tcp port, that will be used to listen for events from subscribtion manager</param>
+ <param name="filters">Describe set of filters, which notification producer should use to filter events. </param>
+</member>
+<member name="M:onvif.utils.OdmSession.GetBaseEvents(System.Int32,System.Collections.Generic.IEnumerable{onvif.services.TopicExpressionFilter},System.Collections.Generic.IEnumerable{onvif.services.MessageContentFilter})">
+ <summary>Returns observable which can be used to retrieve events via BaseNotification mechanism.</summary>
+ <param name="port">Number of tcp port, that will be used to listen for events from subscribtion manager</param>
+ <param name="topicExpressionFilters">Describe subset of filters, which notification producer should use to filter events. </param>
+ <param name="messageContentFilters">Describe subset of filters, which notification producer should use to filter events. </param>
+</member>
+<member name="M:onvif.utils.OdmSession.GetBaseEvents(System.Int32)">
+ <summary>Returns observable which can be used to retrieve events via BaseNotification mechanism.</summary>
+ <param name="port">Number of tcp port, that will be used to listen for events from subscribtion manager</param>
+</member>
+<member name="P:onvif.utils.NicInfo.subnet">
+<summary>subnet mask in CIDR notation</summary>
+</member>
+<member name="P:onvif.utils.HandlingMailbox`1.OnError">
+<summary>
+ Triggered when an unhandled exception occurs
+</summary>
+</member>
+<member name="M:onvif.utils.HandlingMailbox`1.Start``1(Microsoft.FSharp.Core.FSharpFunc{onvif.utils.HandlingMailbox{``0},Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}})">
+<summary>
+ Start the mailbox processor
+</summary>
+</member>
+<member name="M:onvif.utils.HandlingMailbox`1.Start">
+<summary>
+ Starts the mailbox processor
+</summary>
+</member>
+<member name="M:onvif.utils.HandlingMailbox`1.Receive">
+<summary>
+ Receive a message from the mailbox processor
+</summary>
+</member>
+<member name="M:onvif.utils.HandlingMailbox`1.Post(`0)">
+<summary>
+ Post a message to the mailbox processor
+</summary>
+</member>
+<member name="T:onvif.utils.HandlingMailbox`1">
+<summary>
+ A wrapper for MailboxProcessor that catches all unhandled exceptions
+ and reports them via the &apos;OnError&apos; event. Otherwise, the API
+ is the same as the API of &apos;MailboxProcessor&apos;
+ A wrapper for MailboxProcessor that catches all unhandled exceptions
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>utils.fsharp</name></assembly>
+<members>
+<member name="T:utils.fsharp.AsyncObserver`1">
+<summary></summary>
+</member>
+<member name="T:utils.fsharp.Math">
+<summary>Math extensions</summary>
+</member>
+<member name="M:utils.fsharp.IScheduler.InvokeAsync``1(System.Reactive.Concurrency.IScheduler,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Memoize.Static``1(Microsoft.FSharp.Control.FSharpAsync{``0})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``9(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5},Microsoft.FSharp.Control.FSharpAsync{``6},Microsoft.FSharp.Control.FSharpAsync{``7},Microsoft.FSharp.Control.FSharpAsync{``8})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``8(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5},Microsoft.FSharp.Control.FSharpAsync{``6},Microsoft.FSharp.Control.FSharpAsync{``7})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``7(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5},Microsoft.FSharp.Control.FSharpAsync{``6})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``6(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``5(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``4(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.Parallel.Static``3(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``9(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5},Microsoft.FSharp.Control.FSharpAsync{``6},Microsoft.FSharp.Control.FSharpAsync{``7},Microsoft.FSharp.Control.FSharpAsync{``8})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``8(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5},Microsoft.FSharp.Control.FSharpAsync{``6},Microsoft.FSharp.Control.FSharpAsync{``7})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``7(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5},Microsoft.FSharp.Control.FSharpAsync{``6})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``6(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4},Microsoft.FSharp.Control.FSharpAsync{``5})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``5(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3},Microsoft.FSharp.Control.FSharpAsync{``4})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``4(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2},Microsoft.FSharp.Control.FSharpAsync{``3})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``3(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1},Microsoft.FSharp.Control.FSharpAsync{``2})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.StartChilds.Static``2(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Control.FSharpAsync{``1})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.CreateWithAbortHandler.Static``1(Microsoft.FSharp.Core.FSharpFunc{utils.fsharp.IAsyncSink{``0},System.Action})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.CreateWithDisposable.Static``1(Microsoft.FSharp.Core.FSharpFunc{utils.fsharp.IAsyncSink{``0},System.IDisposable})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.CreateWithDisposable1.Static``2(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Core.FSharpFunc{``1,System.Boolean},Microsoft.FSharp.Core.FSharpFunc{System.OperationCanceledException,System.Boolean}},System.IDisposable})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.CreateWithAbortHandler1.Static``2(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Core.FSharpFunc{``1,System.Boolean},Microsoft.FSharp.Core.FSharpFunc{System.OperationCanceledException,System.Boolean}},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit}})">
+<summary></summary>
+</member>
+<member name="M:utils.fsharp.Async.SleepEx.Static(System.Int32)">
+<summary></summary>
+</member>
+<member name="M:Array.getNthOrDefault``1(System.Int32,``0[])">
+<summary></summary>
+</member>
+<member name="M:Array.tryGetNth``1(System.Int32,``0[])">
+<summary></summary>
+</member>
+<member name="M:Seq.index``1(System.Collections.Generic.IEnumerable{``0})">
+<summary></summary>
+</member>
+<member name="M:Seq.zipAll``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})">
+<summary></summary>
+</member>
+<member name="M:Seq.getNthOrDefault``1(System.Int32,System.Collections.Generic.IEnumerable{``0})">
+<summary></summary>
+</member>
+<member name="M:Seq.tryGetNth``1(System.Int32,System.Collections.Generic.IEnumerable{``0})">
+<summary></summary>
+</member>
+<member name="M:Seq.emptyIfNull``1(System.Collections.Generic.IEnumerable{``0})">
+<summary></summary>
+</member>
+<member name="M:Seq.repeat``2(``0,System.Collections.Generic.IEnumerable{``1})">
+<summary></summary>
+</member>
+</members>
+</doc>

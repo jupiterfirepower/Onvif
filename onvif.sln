@@ -27,7 +27,7 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "onvif.discovery", "onvif\on
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onvif.Proxy", "Onvif.Proxy\Onvif.Proxy.csproj", "{06E998E6-6AA5-49B1-B87C-8BB7CF2CD9C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onvif.Camera.Client", "OnvifClient\Onvif.Camera.Client.csproj", "{3BDCEF69-4ACA-4954-A20C-578CFB609BDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onvif.Client", "OnvifClient\Onvif.Client.csproj", "{3BDCEF69-4ACA-4954-A20C-578CFB609BDD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onvif.Contracts", "Onvif.Contracts\Onvif.Contracts.csproj", "{20A11B23-D00B-4A82-8156-E6E4F71BD156}"
 EndProject
@@ -334,7 +334,7 @@ Global
 		{04196C86-66F6-4A9C-BE0B-90AA5353B1C6} = {C0B6D110-9422-4135-8208-926C67909788}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {42588665-FFC3-45A1-9612-41025360B643}
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+		SolutionGuid = {42588665-FFC3-45A1-9612-41025360B643}
 	EndGlobalSection
 EndGlobal
